@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 主体城市列表listview部分 start -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <!-- 左边城市列表部分 start -->
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.yhyy.cityselect.widget.PinnedListView
+                    android:id="@+id/pinnedList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:alwaysDrawnWithCache="true"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@null"
+                    android:scrollbars="none"
+                    android:dividerHeight="0dp"
+                    android:drawSelectorOnTop="false"
+                    android:focusableInTouchMode="true" />
+            </RelativeLayout>
+        </FrameLayout>
+        <!-- 左边城市列表部分 end -->
+
+        <!-- 右边字母列表 start -->
+        <View
+            android:layout_width="@dimen/one"
+            android:layout_height="match_parent"
+            android:background="@color/gray_line" />
+
+        <com.yhyy.cityselect.widget.BladeView
+            android:id="@+id/bladeView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white" />
+        <!-- 右边字母列表 end -->
+    </LinearLayout>
+    <!-- 主体城市列表listview部分 end -->
+    <include layout="@layout/include_control_empty" />
+</RelativeLayout>

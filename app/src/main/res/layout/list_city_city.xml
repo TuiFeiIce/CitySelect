@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_bg"
+        android:gravity="left|center"
+        android:padding="@dimen/ten"
+        android:text=""
+        android:textColor="@color/gray_text"
+        android:textStyle="bold" />
+
+    <include layout="@layout/include_control_line" />
+
+    <TextView
+        android:id="@+id/tv_title_column"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/select_bg"
+        android:padding="@dimen/ten"
+        android:text="深圳"
+        android:textColor="@color/gray_text" />
+
+    <include layout="@layout/include_control_line" />
+
+</LinearLayout>

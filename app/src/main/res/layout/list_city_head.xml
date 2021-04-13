@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_bg"
+        android:gravity="center_vertical"
+        android:padding="@dimen/ten"
+        android:text="定位城市"
+        android:textColor="@color/gray_text" />
+
+    <include layout="@layout/include_control_line" />
+
+    <TextView
+        android:id="@+id/tv_city_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/location_city"
+        android:gravity="center_vertical"
+        android:padding="@dimen/ten"
+        android:background="@drawable/select_bg"
+        android:text="定位中……"
+        android:textColor="@color/gray_text" />
+
+    <include layout="@layout/include_control_line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_bg"
+        android:gravity="center_vertical"
+        android:padding="@dimen/ten"
+        android:text="热门城市"
+        android:textColor="@color/gray_text" />
+
+    <include layout="@layout/include_control_line" />
+
+    <!-- 热门城市 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recy_city_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"/>
+
+    <include layout="@layout/include_control_line" />
+
+</LinearLayout>
